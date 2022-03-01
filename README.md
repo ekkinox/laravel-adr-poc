@@ -55,7 +55,7 @@ In this project, we use a [dummy domain example](app/Domain).
 
 This project provides [2 responders](app/Responder), the [JsonSerializerResponder](app/Responder/JsonSerializerResponder.php) being used by default.
 
-You can configure which responder to use in the dedicated [config.adr.php](config/adr.php) configuration file:
+You can configure which responder to use in the dedicated [config/adr.php](config/adr.php) configuration file:
 
 ```php
 // config/adr.php
@@ -71,5 +71,5 @@ return [
 Notes:
 - for the `ContentNegotiationResponder`, the supported types are `XML`, `CSV` and `JSON` as a fallback
 - callable by providing an `Accept` request header containing respectively `application/xml`, `text/csv` and `application/json`
-- you can configure the content negotiation priorities in [config.adr.php](config/adr.php)
+- you can configure the content negotiation priorities in [config/adr.php](config/adr.php)
 
