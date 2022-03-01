@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
-use App\Responder\ContentNegotiation\RequestContentTypeNegotiator;
-use App\Responder\ContentNegotiation\RequestContentTypeNegotiatorInterface;
-use App\Responder\ContentNegotiationResponder;
-use App\Responder\JsonResponder;
-use App\Responder\ResponderInterface;
+use App\Responders\ContentNegotiation\RequestContentTypeNegotiator;
+use App\Responders\ContentNegotiation\RequestContentTypeNegotiatorInterface;
+use App\Responders\ContentNegotiationResponder;
+use App\Responders\JsonResponder;
+use App\Responders\ResponderInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 use Negotiation\Negotiator;

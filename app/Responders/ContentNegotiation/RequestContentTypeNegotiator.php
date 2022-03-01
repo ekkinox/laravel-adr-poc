@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Responder\ContentNegotiation;
+namespace App\Responders\ContentNegotiation;
 
 use Illuminate\Http\Request;
 use Negotiation\Negotiator;

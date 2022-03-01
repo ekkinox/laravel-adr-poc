@@ -1,7 +1,7 @@
 <?php
 
-use App\Responder\ContentNegotiationResponder;
-use App\Responder\JsonResponder;
+use App\Responders\ContentNegotiationResponder;
+use App\Responders\JsonResponder;
 
 return [
     /*
@@ -12,8 +12,8 @@ return [
     | Here you can define which responder you want to use on app level
     |
     */
-    'responder' => JsonResponder::class,
-    //'responder' => ContentNegotiationResponder::class,
+    //'responder' => JsonResponder::class,
+    'responder' => ContentNegotiationResponder::class,
 
     /*
     |--------------------------------------------------------------------------

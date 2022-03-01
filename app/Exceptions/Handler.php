@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use App\Responder\ResponderInterface;
+use App\Responders\ResponderInterface;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 

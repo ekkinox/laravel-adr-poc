@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Responder;
+namespace App\Responders;
 
-use App\Responder\ContentNegotiation\RequestContentTypeNegotiatorInterface;
+use App\Responders\ContentNegotiation\RequestContentTypeNegotiatorInterface;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;

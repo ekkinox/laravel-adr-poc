@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Responder;
+namespace App\Responders;
 
 use Symfony\Component\HttpFoundation\Response;
 use Throwable;

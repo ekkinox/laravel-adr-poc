@@ -6,7 +6,7 @@
 
 - [Usage](#usage)
 - [ADR implementation](#adr-implementation)
-  - [Actions](#actions)
+  - [Action](#action)
   - [Domain](#domain)
   - [Responder](#responder)
 
@@ -30,11 +30,11 @@ The application will then be exposing 2 endpoints:
 
 You can find below [how is implemented](https://github.com/ekkinox/laravel-adr-poc/pull/1) the [ADR pattern](https://github.com/pmjones/adr) in this project.
 
-### Actions
+### Action
 
 The [actions](app/Http/Controllers) are small invokable classes responsible for one HTTP method + route:
 - they inject and call the [domain logic](app/Domain), making them domain concerns agnostic
-- they inject a [responder](app/Responder/ResponderInterface.php) to build a response from the domain logic payload, making them response concerns agnostic
+- they inject a [responder](app/Responders/ResponderInterface.php) to build a response from the domain logic payload, making them response concerns agnostic
 
 To ease action classes creation:
 ```shell
@@ -53,7 +53,7 @@ In this project, we use a [dummy domain service](app/Domain/DomainService.php) a
 
 ### Responder
 
-This project provides [2 responders](app/Responder), the [JsonResponder](app/Responder/JsonResponder.php) being used by default.
+This project provides [2 responders](app/Responders), the [JsonResponder](app/Responders/JsonResponder.php) being used by default.
 
 You can configure which responder to use in the dedicated [config/adr.php](config/adr.php) configuration file:
 
@@ -61,7 +61,7 @@ You can configure which responder to use in the dedicated [config/adr.php](confi
 // config/adr.php
 <?php
 
-use App\Responder\ContentNegotiationResponder;
+use App\Responders\ContentNegotiationResponder;
 
 return [
     'responder' => ContentNegotiationResponder::class,

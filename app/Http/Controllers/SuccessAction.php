@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Domain\DomainService;
-use App\Responder\ResponderInterface;
+use App\Responders\ResponderInterface;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
