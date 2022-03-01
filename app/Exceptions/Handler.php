@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use App\Responder\ResponderInterface;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -34,8 +35,9 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
+        // We use the responder bound in container to render the exceptions
+        $this->renderable(function (Throwable $e) {
+            return $this->container->get(ResponderInterface::class)->respondForException($e);
         });
     }
 }

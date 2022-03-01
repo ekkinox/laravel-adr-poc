@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ErrorAction;
+use App\Http\Controllers\SuccessAction;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// ADR actions
+Route::get('/success', SuccessAction::class);
+Route::get('/error', ErrorAction::class);
