@@ -6,6 +6,9 @@
 
 - [Usage](#usage)
 - [ADR implementation](#adr-implementation)
+  - [Actions](#actions)
+  - [Domain](#domain)
+  - [Responder](#responder)
 
 ## Usage
 
@@ -17,10 +20,10 @@ php artisan serve --port=8000
 
 The application will then be exposing 2 endpoints:
 
-| Route                                                                              | Description                                                                                  |
-|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [http://localhost:8000/success?input=xxx](http://localhost:8000/success?input=xxx) | Example of success route returning an example domain payload (with optional input parameter) |
-| [http://localhost:8000/error](http://localhost:8000/error)                         | Example of error route throwing an example exception                                         |
+| Route                                                                              | Description                                          |
+|------------------------------------------------------------------------------------|------------------------------------------------------|
+| [http://localhost:8000/success?input=xxx](http://localhost:8000/success?input=xxx) | Example of success route (with optional parameter)   |
+| [http://localhost:8000/error](http://localhost:8000/error)                         | Example of error route throwing an example exception |
 
 
 ## ADR implementation
