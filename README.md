@@ -25,7 +25,7 @@ The application will then be exposing 2 endpoints:
 
 ## ADR implementation
 
-You can find below how is implemented the [ADR pattern](https://github.com/pmjones/adr) in this project.
+You can find below [how is implemented](https://github.com/ekkinox/laravel-adr-poc/pull/1) the [ADR pattern](https://github.com/pmjones/adr) in this project.
 
 ### Actions
 
