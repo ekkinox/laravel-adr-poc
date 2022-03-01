@@ -49,7 +49,7 @@ Notes:
 
 Like in any Laravel application, they can be any service classes, if possible HTTP agnostic (to be able to reuse it in CLI, workers, jobs, ...)
 
-In this project, we use a [dummy domain example](app/Domain).
+In this project, we use a [dummy domain service](app/Domain/DomainService.php) as example.
 
 ### Responder
 
