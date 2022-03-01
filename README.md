@@ -15,7 +15,7 @@
 After cloning this repository, simply run:
 
 ```shell
-php artisan serve --port=8000
+composer install && php artisan serve --port=8000
 ```
 
 The application will then be exposing 2 endpoints:
