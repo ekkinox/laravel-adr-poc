@@ -69,6 +69,7 @@ return [
 ```
 
 Notes:
+- for both responders, you can change the `APP_DEBUG` value to `true` (in the [.env](.env) file) to get traces on errors
 - for the `ContentNegotiationResponder`, the supported types are `XML`, `CSV` and `JSON` as a fallback
 - callable by providing an `Accept` request header containing respectively `application/xml`, `text/csv` and `application/json`
 - you can configure the content negotiation priorities in [config/adr.php](config/adr.php)
