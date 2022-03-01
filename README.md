@@ -1,6 +1,6 @@
 # Laravel ADR PoC
 
-> Laravel based proof of concept for [ADR pattern](https://github.com/pmjones/adr) application.
+> Laravel based proof of concept for applications implementing the [ADR pattern](https://github.com/pmjones/adr).
 
 ## Table of contents
 
