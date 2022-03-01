@@ -53,7 +53,7 @@ In this project, we use a [dummy domain service](app/Domain/DomainService.php) a
 
 ### Responder
 
-This project provides [2 responders](app/Responder), the [JsonSerializerResponder](app/Responder/JsonSerializerResponder.php) being used by default.
+This project provides [2 responders](app/Responder), the [JsonResponder](app/Responder/JsonResponder.php) being used by default.
 
 You can configure which responder to use in the dedicated [config/adr.php](config/adr.php) configuration file:
 

@@ -5,7 +5,7 @@ namespace App\Providers;
 use App\Responder\ContentNegotiation\RequestContentTypeNegotiator;
 use App\Responder\ContentNegotiation\RequestContentTypeNegotiatorInterface;
 use App\Responder\ContentNegotiationResponder;
-use App\Responder\JsonSerializerResponder;
+use App\Responder\JsonResponder;
 use App\Responder\ResponderInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
@@ -38,7 +38,7 @@ class ADRServiceProvider extends ServiceProvider
             );
         });
 
-        // We bind the responder defined in config to the ResponderInterface (default = JsonSerializerResponder)
+        // We bind the responder defined in config to the ResponderInterface (default = JsonResponder)
         $this->app->singleton(ResponderInterface::class, function ($app) {
             return match (config('adr.responder')) {
                 ContentNegotiationResponder::class => new ContentNegotiationResponder(
@@ -47,7 +47,7 @@ class ADRServiceProvider extends ServiceProvider
                     $app->get(Request::class),
                     boolval(env('APP_DEBUG', false))
                 ),
-                default => new JsonSerializerResponder(
+                default => new JsonResponder(
                     boolval(env('APP_DEBUG', false))
                 ),
             };

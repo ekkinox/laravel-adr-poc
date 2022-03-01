@@ -8,7 +8,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
 
 // Example of ADR simple JSON Responder, that covers most needs for a JSON based APIs
-class JsonSerializerResponder implements ResponderInterface
+class JsonResponder implements ResponderInterface
 {
     public function __construct(private bool $debug = false) {}
 
