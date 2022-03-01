@@ -20,7 +20,7 @@ class SuccessAction
     {
         // The action calls the injected domain service,
         // and we delegate the response handling to the injected responder (using domain payload),
-        // making this action agnostic of response concerns.
+        // making this action agnostic of domain and response concerns.
         return $this->responder->respond(
             $this->domainService->getDomainData($request->query('input'))
         );
