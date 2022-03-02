@@ -77,7 +77,7 @@ Notes:
 
 ## Tests
 
-To run the project tests:
+To run the [project tests](tests/):
 ```shell
 vendor/bin/phpunit
 ```

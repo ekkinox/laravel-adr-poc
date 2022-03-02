@@ -7,7 +7,7 @@ use Tests\TestCase;
 
 class ErrorActionTest extends TestCase
 {
-    public function testSuccessWithJsonResponder()
+    public function testErrorWithJsonResponder()
     {
         $response = $this->get('/error');
 
@@ -20,7 +20,7 @@ class ErrorActionTest extends TestCase
         $this->assertArrayNotHasKey('trace', $body);
     }
 
-    public function testSuccessWithJsonResponderAndTraces()
+    public function testErrorWithJsonResponderAndTraces()
     {
         Config::set('app.debug', true);
 
