@@ -12,8 +12,8 @@ return [
     | Here you can define which responder you want to use on app level
     |
     */
-    //'responder' => JsonResponder::class,
-    'responder' => ContentNegotiationResponder::class,
+    'responder' => JsonResponder::class,
+    //'responder' => ContentNegotiationResponder::class,
 
     /*
     |--------------------------------------------------------------------------
