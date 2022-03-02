@@ -9,6 +9,7 @@
   - [Action](#action)
   - [Domain](#domain)
   - [Responder](#responder)
+- [Tests](#tests)
 
 ## Usage
 
@@ -74,3 +75,9 @@ Notes:
 - callable by providing an `Accept` request header containing respectively `application/xml`, `text/csv` and `application/json`
 - you can configure the content negotiation priorities in [config/adr.php](config/adr.php)
 
+## Tests
+
+To run the project tests:
+```shell
+vendor/bin/phpunit
+```
