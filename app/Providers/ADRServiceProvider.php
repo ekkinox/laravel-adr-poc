@@ -45,10 +45,10 @@ class ADRServiceProvider extends ServiceProvider
                     $app->get(SerializerInterface::class),
                     $app->get(RequestContentTypeNegotiatorInterface::class),
                     $app->get(Request::class),
-                    boolval(env('APP_DEBUG', false))
+                    boolval(config('app.debug', false))
                 ),
                 default => new JsonResponder(
-                    boolval(env('APP_DEBUG', false))
+                    boolval(config('app.debug', false))
                 ),
             };
         });
